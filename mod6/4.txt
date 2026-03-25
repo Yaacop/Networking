@@ -1,0 +1,5 @@
+The IP address 192.168.10.5 belongs to Class C and is a private IP address. The IP address 172.20.15.1 belongs to Class B and is also a private IP, as it falls within the range 172.16.0.0 to 172.31.255.255. The IP address 8.8.8.8 belongs to Class A and is a public IP address.
+
+Private IP addresses cannot directly communicate over the internet. To enable communication, Network Address Translation (NAT) is used. NAT allows a router to translate private IP addresses into a public IP address before sending packets to external networks.
+
+When a private device sends data to the internet, the router replaces the source private IP with its own public IP address. When the response returns, the router maps it back to the original private IP. This allows multiple devices in a private network to share a single public IP address.

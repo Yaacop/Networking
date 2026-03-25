@@ -1,0 +1,7 @@
+10.
+
+Using DORA process the dhcp server assigns ip address
+
+when a device connected to a network discovers the dhcp server for an ip 
+the server offer an ip and the device request to acknowledge the ip 
+and the server acknowledges it.

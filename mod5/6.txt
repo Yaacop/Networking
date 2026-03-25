@@ -1,0 +1,13 @@
+We are given:
+10.1.1.1
+172.16.5.10
+192.168.1.5
+
+The IP addresses were classified based on their first octet. 10.1.1.1 belongs to Class A with default subnet mask 255.0.0.0, 
+172.16.5.10 belongs to Class B with default mask 255.255.0.0, and 192.168.1.5 belongs to Class C with default mask 
+255.255.255.0. Each class has a defined range of IP addresses used for network identification.
+
+
+1–126 → A
+128–191 → B
+192–223 → C

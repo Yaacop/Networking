@@ -1,0 +1,2 @@
+ARP request is broadcast by the sender to find the MAC address corresponding to a destination IP, while the ARP reply is a unicast response from the target device containing its MAC address.
+This process allows devices in the same LAN to map IP addresses to MAC addresses so that Ethernet frames can be delivered correctly.

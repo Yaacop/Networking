@@ -1,0 +1,24 @@
+6.
+The remote computer runs a server.
+
+Your computer runs a client.
+
+Communication happens through:
+
+TCP/IP
+
+Screen capture
+
+Keyboard/mouse events
+
+Example flow:
+
+Client PC
+   ↓
+Remote Desktop Client
+   ↓
+Internet / LAN
+   ↓
+Remote Desktop Server
+   ↓
+Remote Computer

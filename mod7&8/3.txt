@@ -1,0 +1,6 @@
+3. traceroute google.com
+traceroute to google.com (142.251.43.238), 64 hops max
+  1   172.29.0.1  0.470ms  0.228ms  0.228ms
+  2   192.168.0.1  3.409ms  1.738ms  11.395ms
+  3   *  *  *
+  4   10.200.150.67  1666.448ms !X  1447.445ms !X  1553.357ms !X

@@ -1,0 +1,91 @@
+
+
+1 .  ping -c 4 google.com
+PING google.com (142.250.206.78) 56(84) bytes of data.
+64 bytes from pnmaaa-ay-in-f14.1e100.net (142.250.206.78): icmp_seq=1 ttl=117 time=18.4 ms
+64 bytes from pnmaaa-ay-in-f14.1e100.net (142.250.206.78): icmp_seq=2 ttl=117 time=18.1 ms
+64 bytes from pnmaaa-ay-in-f14.1e100.net (142.250.206.78): icmp_seq=3 ttl=117 time=15.7 ms
+64 bytes from pnmaaa-ay-in-f14.1e100.net (142.250.206.78): icmp_seq=4 ttl=117 time=17.2 ms
+
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3269ms
+rtt min/avg/max/mdev = 15.655/17.326/18.386/1.061 ms
+ 
+ ping -c 4 cisco.com
+PING cisco.com (72.163.4.185) 56(84) bytes of data.
+64 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=1 ttl=41 time=264 ms
+64 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=2 ttl=41 time=261 ms
+64 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=3 ttl=41 time=262 ms
+64 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=4 ttl=41 time=261 ms
+
+--- cisco.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3171ms
+rtt min/avg/max/mdev = 261.000/261.895/263.685/1.064 ms
+
+
+ ping -c 4 www.amazon.com
+PING e15316.dsca.akamaiedge.net (23.41.122.94) 56(84) bytes of data.
+64 bytes from a23-41-122-94.deploy.static.akamaitechnologies.com (23.41.122.94): icmp_seq=1 ttl=54 time=18.0 ms
+64 bytes from a23-41-122-94.deploy.static.akamaitechnologies.com (23.41.122.94): icmp_seq=2 ttl=54 time=17.6 ms
+64 bytes from a23-41-122-94.deploy.static.akamaitechnologies.com (23.41.122.94): icmp_seq=3 ttl=54 time=18.8 ms
+64 bytes from a23-41-122-94.deploy.static.akamaitechnologies.com (23.41.122.94): icmp_seq=4 ttl=54 time=18.2 ms
+
+--- e15316.dsca.akamaiedge.net ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3270ms
+rtt min/avg/max/mdev = 17.642/18.160/18.789/0.415 ms
+
+
+ ping -c 4 www.facebook.com
+PING star-mini.c10r.facebook.com (57.144.208.1) 56(84) bytes of data.
+64 bytes from edge-star-mini-shv-01-maa3.facebook.com (57.144.208.1): icmp_seq=1 ttl=55 time=17.5 ms
+64 bytes from edge-star-mini-shv-01-maa3.facebook.com (57.144.208.1): icmp_seq=2 ttl=55 time=20.3 ms
+64 bytes from edge-star-mini-shv-01-maa3.facebook.com (57.144.208.1): icmp_seq=3 ttl=55 time=18.6 ms
+64 bytes from edge-star-mini-shv-01-maa3.facebook.com (57.144.208.1): icmp_seq=4 ttl=55 time=15.7 ms
+
+--- star-mini.c10r.facebook.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3269ms
+rtt min/avg/max/mdev = 15.713/18.037/20.313/1.667 ms
+
+
+ nslookup www.google.com
+Server:         10.255.255.254
+Address:        10.255.255.254#53
+
+Non-authoritative answer:
+Name:   www.google.com
+Address: 142.251.152.119
+
+
+nslookup www.amazon.com
+Server:         10.255.255.254
+Address:        10.255.255.254#53
+
+Non-authoritative answer:
+www.amazon.com  canonical name = tp.47cf2c8c9-frontier.amazon.com.
+tp.47cf2c8c9-frontier.amazon.com        canonical name = cf.47cf2c8c9-frontier.amazon.com.
+Name:   cf.47cf2c8c9-frontier.amazon.com
+Address: 108.159.19.102
+
+
+nslookup www.cisco.com
+Server:         10.255.255.254
+Address:        10.255.255.254#53
+
+Non-authoritative answer:
+www.cisco.com   canonical name = www.cisco.com.akadns.net.
+www.cisco.com.akadns.net        canonical name = wwwds.cisco.com.edgekey.net.
+wwwds.cisco.com.edgekey.net     canonical name = wwwds.cisco.com.edgekey.net.globalredir.akadns.net.
+wwwds.cisco.com.edgekey.net.globalredir.akadns.net      canonical name = e2867.dsca.akamaiedge.net.
+Name:   e2867.dsca.akamaiedge.net
+Address: 23.41.120.121
+
+
+nslookup www.github.com
+Server:         10.255.255.254
+Address:        10.255.255.254#53
+
+Non-authoritative answer:
+www.github.com  canonical name = github.com.
+Name:   github.com
+Address: 20.207.73.82
+

@@ -1,0 +1,36 @@
+8.
+yaacop@YAACOP-PC:~$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.29.1.20  netmask 255.255.240.0  broadcast 172.29.15.255
+        inet6 fe80::215:5dff:feb8:9fe1  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:b8:9f:e1  txqueuelen 1000  (Ethernet)
+        RX packets 12580  bytes 94016271 (94.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 9697  bytes 714799 (714.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 5006  bytes 450378 (450.3 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 5006  bytes 450378 (450.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+yaacop@YAACOP-PC:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet 10.255.255.254/32 brd 10.255.255.254 scope global lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:b8:9f:e1 brd ff:ff:ff:ff:ff:ff
+    inet 172.29.1.20/20 brd 172.29.15.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:feb8:9fe1/64 scope link
+       valid_lft forever preferred_lft forever
+

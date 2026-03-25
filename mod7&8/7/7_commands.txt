@@ -1,0 +1,66 @@
+7.  Create management vlan
+
+Switch> enable
+Switch# configure terminal
+Switch(config)# vlan 99
+Switch(config-vlan)# name MANAGEMENT
+Switch(config-vlan)# exit
+
+
+assign ip address to vlan 99
+
+Switch(config)# interface vlan 99
+Switch(config-if)# ip address 192.168.99.1 255.255.255.0
+Switch(config-if)# no shutdown
+Switch(config-if)# exit
+
+assign switch port to vlan 99
+
+Switch(config)# interface fastEthernet 0/1
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 99
+Switch(config-if)# exit
+
+set default gateway
+
+Switch(config)# ip default-gateway 192.168.99.254
+
+enable telnet access
+
+Switch(config)# line vty 0 4
+Switch(config-line)# password cisco
+Switch(config-line)# login
+Switch(config-line)# transport input telnet
+Switch(config-line)# exit
+
+enable ssh access
+
+Switch(config)# hostname Switch1
+Switch1(config)# ip domain-name lab.local
+Switch1(config)# crypto key generate rsa
+  → Enter key size: 1024
+
+Switch1(config)# username admin privilege 15 secret cisco123
+Switch1(config)# line vty 0 4
+Switch1(config-line)# transport input ssh
+Switch1(config-line)# login local
+Switch1(config-line)# exit
+
+Switch1(config)# ip ssh version 2
+
+
+PC Configuration
+
+Set the PC's IP in the same subnet:
+- **IP:** `192.168.99.10`
+- **Subnet:** `255.255.255.0`
+- **Gateway:** `192.168.99.254`
+
+
+Testing
+
+Telnet Test — Open PC Command Prompt:
+telnet 192.168.99.1
+
+SSH Test:
+ssh -l admin 192.168.99.1

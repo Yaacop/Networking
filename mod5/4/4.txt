@@ -1,0 +1,3 @@
+The capture shows the complete DHCP process where the client first sends a DHCP Release to give up its old IP address (192.168.0.5) to the DHCP server (192.168.0.1).
+Then the client starts the DORA process: it sends a DHCP Discover (broadcast) to find a server, receives a DHCP Offer with an available IP, sends a DHCP Request to accept it, and finally gets a DHCP ACK confirming the IP assignment.
+These packets use UDP ports 67 (server) and 68 (client) and allow the client to dynamically obtain network configuration like IP address, gateway, and lease time.

@@ -1,0 +1,17 @@
+11. 
+PS C:\Users\User temp> ssh -p 2230 devuser@sandbox.ccc.embedur.com
+devuser@sandbox.ccc.embedur.com's password:
+Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 5.15.0-1089-kvm x86_64)
+ 
+* Documentation:  https://help.ubuntu.com
+* Management:     https://landscape.canonical.com
+* Support:        https://ubuntu.com/pro
+ 
+This system has been minimized by removing packages and content that are
+not required on a system that users do not log into.
+ 
+To restore this content, you can run the 'unminimize' command.
+Last login: Wed Mar 25 07:21:34 2026 from 192.168.115.83
+$ bsh
+-sh: 1: bsh: not found
+$ bash

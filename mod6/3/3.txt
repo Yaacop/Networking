@@ -1,0 +1,7 @@
+Network Address : 10.0.0.0
+Subnet Mask     : /24 = 255.255.255.0
+Total Hosts     : 254 usable
+Need            : 4 equal subnets
+
+New Subnet Mask = /26 = 255.255.255.192
+

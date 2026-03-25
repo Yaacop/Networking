@@ -1,0 +1,11 @@
+1 . yaacop@YAACOP-PC:~/mod1_2$ cp -r /home/yaacop/mod1_2/sample /home/yaacop/
+    
+    yaacop@YAACOP-PC:~$ ls
+    Legal-Query-RAG  embedur  file1  file1.txt  mod1_2  module1  sample  script.sh  script.shu  script1.sh  tts
+
+    PS C:\Users\User temp> scp -P 2230 -r "C:\Users\User temp\Downloads\comparison_plot.png"           devuser@sandbox.ccc.embedur.com:/home/devuser/cpl_preproc1/isp_pipeline
+>>
+devuser@sandbox.ccc.embedur.com's password:
+comparison_plot.png                                                               100%  408KB  49.7KB/s   00:08
+
+

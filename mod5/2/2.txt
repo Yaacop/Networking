@@ -1,0 +1,3 @@
+Initially, PC0 successfully communicates with the gateway (192.168.1.1) and learns its MAC address through ARP, which is shown in the ARP table.
+After the spoofing simulation, the ARP entry for the gateway changes to a different MAC address, indicating that a malicious device has poisoned the ARP table.
+As a result, traffic meant for the gateway is redirected to the attacker, demonstrating how ARP spoofing can enable man-in-the-middle or denial-of-service attacks.

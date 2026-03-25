@@ -1,0 +1,16 @@
+yaacop@YAACOP-PC:~$ ip link
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 02:11:22:33:44:55 brd ff:ff:ff:ff:ff:ff permaddr 00:15:5d:b8:9f:e1
+yaacop@YAACOP-PC:~$ bridge
+Usage: bridge [ OPTIONS ] OBJECT { COMMAND | help }
+       bridge [ -force ] -batch filename
+where  OBJECT := { link | fdb | mdb | vlan | monitor }
+       OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] |
+                    -o[neline] | -t[imestamp] | -n[etns] name |
+                    -c[ompressvlans] -color -p[retty] -j[son] }
+yaacop@YAACOP-PC:~$ bridge fdb show
+01:00:5e:00:00:01 dev eth0 self permanent
+33:33:00:00:00:01 dev eth0 self permanent
+33:33:ff:33:44:55 dev eth0 self permanent

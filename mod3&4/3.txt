@@ -1,0 +1,63 @@
+yaacop@YAACOP-PC:~$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.29.1.20  netmask 255.255.240.0  broadcast 172.29.15.255
+        inet6 fe80::215:5dff:feb8:9fe1  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:b8:9f:e1  txqueuelen 1000  (Ethernet)
+        RX packets 12853  bytes 94036372 (94.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 9886  bytes 726173 (726.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 6239  bytes 560506 (560.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 6239  bytes 560506 (560.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+yaacop@YAACOP-PC:~$ sudo ifconfig eth0 down
+[sudo] password for yaacop:
+yaacop@YAACOP-PC:~$ sudo ifconfig eth0 192.168.10.10 netmask 255.255.255.0
+yaacop@YAACOP-PC:~$  sudo ifconfig eth0 up
+yaacop@YAACOP-PC:~$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.10.10  netmask 255.255.255.0  broadcast 192.168.10.255
+        inet6 fe80::215:5dff:feb8:9fe1  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:b8:9f:e1  txqueuelen 1000  (Ethernet)
+        RX packets 12857  bytes 94036951 (94.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 9896  bytes 726941 (726.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 6243  bytes 560894 (560.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 6243  bytes 560894 (560.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+yaacop@YAACOP-PC:~$ sudo ifconfig eth0 down
+yaacop@YAACOP-PC:~$ sudo ifconfig eth0 hw ether 02:11:22:33:44:55
+yaacop@YAACOP-PC:~$ sudo ifconfig eth0 up
+yaacop@YAACOP-PC:~$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.10.10  netmask 255.255.255.0  broadcast 192.168.10.255
+        inet6 fe80::11:22ff:fe33:4455  prefixlen 64  scopeid 0x20<link>
+        ether 02:11:22:33:44:55  txqueuelen 1000  (Ethernet)
+        RX packets 12857  bytes 94036951 (94.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 9902  bytes 727497 (727.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 6247  bytes 561282 (561.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 6247  bytes 561282 (561.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0

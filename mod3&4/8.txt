@@ -1,0 +1,16 @@
+Linux Kernel Handling of Ethernet Devices
+
+The Linux kernel provides a networking subsystem that manages communication between network hardware and user applications. 
+Ethernet devices are handled through network drivers that interact with the hardware network interface cards (NICs). These 
+drivers register network interfaces such as eth0 with the kernel using the net_device structure.
+
+When an Ethernet frame arrives from the network, the network driver passes the frame to the Linux kernel networking stack. 
+The kernel processes the Ethernet header to determine the protocol type, such as IPv4, IPv6, or ARP. The packet is then 
+forwarded to the appropriate protocol layer.
+
+Packets traveling through the Linux networking stack are stored in a structure called sk_buff (socket buffer), which contains 
+packet data and metadata. This structure allows efficient packet processing inside the kernel.
+
+When applications send data, the packet travels through several layers including the socket layer, transport layer (TCP/UDP), 
+IP layer, and finally the Ethernet layer. The kernel then sends the frame to the network interface driver, which transmits it 
+through the physical network card.
